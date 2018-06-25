@@ -1,7 +1,8 @@
 
 word =[" "]
 def reverse_each_word (word)
-  word.each do |word|
-    word.reverse
+  word.reverse
+  word.collect do |word|
+    reverse_each_word(word)
   end
 end
